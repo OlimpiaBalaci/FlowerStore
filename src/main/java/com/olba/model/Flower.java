@@ -1,9 +1,14 @@
 package com.olba.model;
 
+import javax.persistence.*;
+
 @Entity
 @Table
 
 public class Flower {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private int id;
     private String flowerName;
